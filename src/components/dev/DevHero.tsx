@@ -5,104 +5,39 @@ import { motion } from "framer-motion";
 export default function DevHero() {
   return (
     <section className="relative pt-40 pb-24 sm:pt-52 sm:pb-32 overflow-hidden bg-[#0a0a0a]">
-      {/* === Dark tech background layers === */}
+      {/* === Digital circuit background — CSS only === */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-        {/* Base grid - perspective dot grid */}
+        {/* Dot matrix grid */}
         <div
-          className="absolute inset-0 opacity-[0.15]"
+          className="absolute inset-0"
           style={{
             backgroundImage:
-              "radial-gradient(circle, #0c9d79 0.5px, transparent 0.5px)",
-            backgroundSize: "40px 40px",
+              "radial-gradient(circle, rgba(12,157,121,0.2) 1px, transparent 1px)",
+            backgroundSize: "32px 32px",
           }}
         />
 
-        {/* Radial gradient overlay — spotlight from top-right */}
+        {/* Center glow — subtle brand color ambient */}
         <div
           className="absolute inset-0"
           style={{
             background:
-              "radial-gradient(ellipse 80% 60% at 70% 10%, rgba(12,157,121,0.12) 0%, transparent 60%), radial-gradient(ellipse 60% 50% at 20% 80%, rgba(12,157,121,0.06) 0%, transparent 50%)",
+              "radial-gradient(ellipse 50% 50% at 50% 40%, rgba(12,157,121,0.07) 0%, transparent 70%)",
           }}
         />
 
-        {/* Animated glow orbs */}
+        {/* Top edge highlight */}
         <div
-          className="absolute w-[500px] h-[500px] rounded-full"
+          className="absolute top-0 left-0 right-0 h-[1px]"
           style={{
-            background: "radial-gradient(circle, rgba(12,157,121,0.15) 0%, transparent 60%)",
-            top: "-10%",
-            right: "-5%",
-            animation: "float-1 20s ease-in-out infinite",
-            willChange: "transform",
+            background:
+              "linear-gradient(90deg, transparent 10%, rgba(12,157,121,0.3) 50%, transparent 90%)",
           }}
         />
-        <div
-          className="absolute w-[400px] h-[400px] rounded-full"
-          style={{
-            background: "radial-gradient(circle, rgba(12,157,121,0.08) 0%, transparent 60%)",
-            bottom: "-5%",
-            left: "-10%",
-            animation: "float-2 16s ease-in-out infinite",
-            willChange: "transform",
-          }}
-        />
-
-        {/* Horizontal neon lines */}
-        <div
-          className="absolute h-[1px] w-full opacity-[0.06]"
-          style={{
-            background: "linear-gradient(90deg, transparent 0%, #0c9d79 20%, #0c9d79 80%, transparent 100%)",
-            top: "30%",
-          }}
-        />
-        <div
-          className="absolute h-[1px] w-full opacity-[0.04]"
-          style={{
-            background: "linear-gradient(90deg, transparent 0%, #0c9d79 30%, #0c9d79 70%, transparent 100%)",
-            top: "65%",
-          }}
-        />
-
-        {/* Animated scan line */}
-        <div
-          className="absolute h-[1px] w-[60%] opacity-[0.15]"
-          style={{
-            background: "linear-gradient(90deg, transparent 0%, #0c9d79 40%, transparent 100%)",
-            top: "45%",
-            animation: "streak-slide 10s ease-in-out infinite",
-            willChange: "transform",
-          }}
-        />
-
-        {/* Vertical accent lines */}
-        <div
-          className="absolute w-[1px] h-full opacity-[0.04] hidden sm:block"
-          style={{
-            background: "linear-gradient(180deg, transparent 0%, #0c9d79 30%, #0c9d79 70%, transparent 100%)",
-            left: "25%",
-          }}
-        />
-        <div
-          className="absolute w-[1px] h-full opacity-[0.04] hidden sm:block"
-          style={{
-            background: "linear-gradient(180deg, transparent 0%, #0c9d79 40%, #0c9d79 60%, transparent 100%)",
-            left: "75%",
-          }}
-        />
-
-        {/* Corner accent — top left */}
-        <svg className="absolute top-8 left-8 sm:top-12 sm:left-12 w-16 h-16 opacity-[0.1]" viewBox="0 0 64 64" fill="none">
-          <path d="M0 24V0h24" stroke="#0c9d79" strokeWidth="1" />
-        </svg>
-        {/* Corner accent — bottom right */}
-        <svg className="absolute bottom-8 right-8 sm:bottom-12 sm:right-12 w-16 h-16 opacity-[0.1]" viewBox="0 0 64 64" fill="none">
-          <path d="M64 40v24H40" stroke="#0c9d79" strokeWidth="1" />
-        </svg>
 
         {/* Bottom fade to next section */}
         <div
-          className="absolute bottom-0 left-0 right-0 h-32"
+          className="absolute bottom-0 left-0 right-0 h-24"
           style={{
             background: "linear-gradient(to top, #0a0a0a, transparent)",
           }}
