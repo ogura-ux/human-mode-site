@@ -9,25 +9,39 @@ export default function DevHero() {
       <div className="absolute bottom-10 left-[5%] w-96 h-96 bg-brand/3 rounded-full blur-3xl" />
 
       <div className="max-w-[1080px] mx-auto px-4 sm:px-6 relative">
-        {/* LCP-critical: render immediately without JS animation */}
-        <p className="text-brand font-bold text-xs tracking-[0.25em] uppercase mb-5 animate-fade-up">
+        <motion.p
+          className="text-brand font-bold text-xs tracking-[0.25em] uppercase mb-5"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
           Bubble Development
-        </p>
+        </motion.p>
 
-        <h1 className="text-[clamp(2rem,5.5vw,4rem)] font-black text-primary leading-[1.15] tracking-[-0.03em] mb-6 sm:mb-8 animate-fade-up [animation-delay:100ms]">
+        <motion.h1
+          className="text-[clamp(2rem,5.5vw,4rem)] font-black text-primary leading-[1.15] tracking-[-0.03em] mb-6 sm:mb-8"
+          initial={{ opacity: 0, y: 35 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.1 }}
+        >
           新規事業のMVPを、
           <br />
           <span className="text-brand">最短2週間</span>で形に。
-        </h1>
+        </motion.h1>
 
-        <p className="text-sm sm:text-base text-text-light max-w-[560px] leading-[1.9] mb-8 sm:mb-10 animate-fade-up [animation-delay:200ms]">
+        <motion.p
+          className="text-sm sm:text-base text-text-light max-w-[560px] leading-[1.9] mb-8 sm:mb-10"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+        >
           ノーコードツールBubbleで、スクラッチ開発比
           <strong className="text-primary">1/3以下のコスト</strong>
           ・<strong className="text-primary">1/4以下の期間</strong>で開発。
           自社サービス2年超の運用実績に裏打ちされた、事業視点の開発を提供します。
-        </p>
+        </motion.p>
 
-        {/* Social proof - can use framer-motion since not LCP */}
+        {/* Social proof */}
         <motion.div
           className="flex flex-wrap gap-6 sm:gap-10 mb-10 sm:mb-12"
           initial={{ opacity: 0, y: 20 }}
