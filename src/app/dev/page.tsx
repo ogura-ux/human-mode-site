@@ -1,5 +1,6 @@
 import DevHeader from "@/components/dev/DevHeader";
 import DevHero from "@/components/dev/DevHero";
+import DevPhilosophy from "@/components/dev/DevPhilosophy";
 import Problems from "@/components/dev/Problems";
 import DevGourmate from "@/components/dev/DevGourmate";
 import DevServices from "@/components/dev/DevServices";
@@ -21,6 +22,7 @@ export default function DevPage() {
       <DevHeader />
       <main>
         <DevHero />
+        <DevPhilosophy />
         <Problems />
         <DevGourmate />
         <DevServices />
