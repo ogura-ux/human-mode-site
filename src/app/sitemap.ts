@@ -1,9 +1,10 @@
 import type { MetadataRoute } from "next";
+import { getBlogList } from "@/lib/microcms";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = "https://human-mode.com";
 
-  return [
+  const staticPages: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
       lastModified: new Date(),
@@ -16,5 +17,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 1.0,
     },
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.7,
+    },
   ];
+
+  // Blog posts from microCMS
+  let blogPages: MetadataRoute.Sitemap = [];
+  try {
+    const { contents } = await getBlogList({ limit: 100 });
+    blogPages = contents.map((post) => ({
+      url: `${baseUrl}/blog/${post.id}`,
+      lastModified: new Date(post.updatedAt || post.publishedAt!),
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    }));
+  } catch {
+    // microCMS unavailable — skip blog entries
+  }
+
+  return [...staticPages, ...blogPages];
 }

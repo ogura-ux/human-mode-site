@@ -25,6 +25,12 @@ export default function Header() {
           HUMAN MODE
         </Link>
         <nav className="flex gap-4 sm:gap-8 items-center">
+          <Link
+            href="/blog"
+            className="text-sm font-bold text-primary hover:text-brand transition hidden md:block"
+          >
+            ブログ
+          </Link>
           <a
             href="https://gourmate-welcome.com/"
             target="_blank"

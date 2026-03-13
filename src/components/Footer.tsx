@@ -27,6 +27,9 @@ export default function Footer() {
             <Link href="/dev" className="text-white/40 hover:text-brand transition text-sm">
               受託開発
             </Link>
+            <Link href="/blog" className="text-white/40 hover:text-brand transition text-sm">
+              ブログ
+            </Link>
           </nav>
         </div>
 
