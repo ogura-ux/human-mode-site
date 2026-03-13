@@ -3,8 +3,8 @@ import SectionLabel from "@/components/ui/SectionLabel";
 
 const cases = [
   {
-    category: "マッチングアプリ",
-    title: "食を通じた出会いプラットフォーム",
+    category: "マッチングサービス",
+    title: "グルメ系マッチングサービス",
     tag: "自社開発実績",
     tagColor: "bg-brand text-white",
     specs: [
