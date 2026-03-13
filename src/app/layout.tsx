@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { inter, notoSansJP, outfit } from "@/lib/fonts";
-import LazyMotionProvider from "@/components/ui/LazyMotionProvider";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -44,7 +43,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${notoSansJP.variable} ${outfit.variable} font-sans text-text-main leading-relaxed bg-white`}
       >
-        <LazyMotionProvider>{children}</LazyMotionProvider>
+        {children}
       </body>
     </html>
   );

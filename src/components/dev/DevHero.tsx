@@ -1,6 +1,6 @@
 "use client";
 
-import { m } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function DevHero() {
   return (
@@ -28,7 +28,7 @@ export default function DevHero() {
         </p>
 
         {/* Social proof - can use framer-motion since not LCP */}
-        <m.div
+        <motion.div
           className="flex flex-wrap gap-6 sm:gap-10 mb-10 sm:mb-12"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -46,9 +46,9 @@ export default function DevHero() {
             <div className="text-2xl sm:text-3xl font-black text-brand">2年+</div>
             <div className="text-[11px] sm:text-xs text-text-light mt-0.5">自社サービス運用</div>
           </div>
-        </m.div>
+        </motion.div>
 
-        <m.div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.45 }}
@@ -69,7 +69,7 @@ export default function DevHero() {
           >
             料金目安を見る
           </a>
-        </m.div>
+        </motion.div>
       </div>
     </section>
   );
