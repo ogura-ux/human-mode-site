@@ -8,7 +8,7 @@ export default function DevFooter() {
         <p className="text-white/30 text-xs mb-8">Product Studio — Dev</p>
         <div className="border-t border-white/5 pt-6">
           <p className="text-white/20 mb-2">
-            &copy; 2025 Human Mode Inc. All Rights Reserved.
+            &copy; {new Date().getFullYear()} Human Mode Inc. All Rights Reserved.
           </p>
           <p>
             <a

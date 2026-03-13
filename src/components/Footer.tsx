@@ -31,7 +31,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/5 pt-8 text-center text-white/20">
-          <p>&copy; 2025 Human Mode Inc. All Rights Reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Human Mode Inc. All Rights Reserved.</p>
         </div>
       </div>
     </footer>
