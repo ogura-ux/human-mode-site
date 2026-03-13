@@ -81,14 +81,14 @@ const techs = [
 
 export default function TechStack() {
   return (
-    <section className="py-24 sm:py-32">
+    <section id="tech" className="py-24 sm:py-32">
       <div className="max-w-[1080px] mx-auto px-4 sm:px-6 text-center">
         <FadeIn>
-          <h3 className="text-[clamp(1.3rem,3.5vw,1.8rem)] font-black text-primary mb-4">
+          <h2 className="text-[clamp(1.3rem,3.5vw,1.8rem)] font-black text-primary mb-4">
             We connect Bubble with Everything
-          </h3>
+          </h2>
           <p className="text-text-light mb-12 sm:mb-14 text-sm sm:text-base">
-            最新のAIモデルや決済システムも、API連携でシームレスに実装します。
+            Bubble開発で必要なAIモデルや決済システムも、API連携でシームレスに実装します。
           </p>
         </FadeIn>
 

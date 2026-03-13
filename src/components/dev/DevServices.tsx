@@ -55,9 +55,9 @@ export default function DevServices() {
           <div className="text-center mb-14 sm:mb-20">
             <SectionLabel>Service Lineup</SectionLabel>
             <h2 className="text-[clamp(1.5rem,4vw,2.25rem)] font-black text-primary">
-              ビジネスフェーズに合わせた
+              ノーコード開発で、
               <br className="hidden sm:block" />
-              最適な開発支援
+              ビジネスフェーズに合わせた最適な開発支援
             </h2>
           </div>
         </FadeIn>
