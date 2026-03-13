@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import type { Metadata } from "next";
 import DevHeader from "@/components/dev/DevHeader";
 import DevHero from "@/components/dev/DevHero";
@@ -9,6 +10,7 @@ import Pricing from "@/components/dev/Pricing";
 import TechStack from "@/components/dev/TechStack";
 import Process from "@/components/dev/Process";
 import FAQ from "@/components/dev/FAQ";
+import DevBlog from "@/components/dev/DevBlog";
 import DevContact from "@/components/dev/DevContact";
 import DevFooter from "@/components/dev/DevFooter";
 import DevJsonLd from "@/components/dev/DevJsonLd";
@@ -49,6 +51,9 @@ export default function DevPage() {
         <TechStack />
         <Process />
         <FAQ />
+        <Suspense fallback={null}>
+          <DevBlog />
+        </Suspense>
         <DevContact />
       </main>
       <DevFooter />

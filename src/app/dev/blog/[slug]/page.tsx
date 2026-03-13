@@ -33,9 +33,6 @@ export async function generateMetadata({
         locale: "ja_JP",
         type: "article",
         publishedTime: post.publishedAt,
-        ...(post.eyecatch && {
-          images: [{ url: post.eyecatch.url, width: 1200, height: 630 }],
-        }),
       },
       twitter: { card: "summary_large_image" },
     };
@@ -115,80 +112,153 @@ export default async function BlogDetailPage({
       />
       <Header />
       <main className="pt-32 pb-20">
-        <article className="max-w-[740px] mx-auto px-4 sm:px-6">
-          {/* Breadcrumb */}
-          <nav className="flex items-center gap-2 text-sm text-text-light mb-8">
-            <Link href="/dev" className="hover:text-brand transition">
-              Bubble受託開発
-            </Link>
-            <span>/</span>
-            <Link href="/dev/blog" className="hover:text-brand transition">
-              記事一覧
-            </Link>
-            <span>/</span>
-            <span className="text-primary truncate max-w-[200px]">
-              {post.title}
-            </span>
-          </nav>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:flex lg:gap-10">
+          {/* Article */}
+          <article className="min-w-0 lg:flex-1">
+            {/* Breadcrumb */}
+            <nav className="flex items-center gap-2 text-sm text-text-light mb-8">
+              <Link href="/dev" className="hover:text-brand transition">
+                Bubble受託開発
+              </Link>
+              <span>/</span>
+              <Link href="/dev/blog" className="hover:text-brand transition">
+                記事一覧
+              </Link>
+              <span>/</span>
+              <span className="text-primary truncate max-w-[200px]">
+                {post.title}
+              </span>
+            </nav>
 
-          {/* Header */}
-          <header className="mb-10">
-            <div className="flex items-center gap-3 mb-4">
-              {post.category && (
-                <span className="inline-block text-xs font-medium text-brand bg-brand-light px-2.5 py-1 rounded-full">
-                  {post.category.name}
-                </span>
-              )}
-              <time className="text-sm text-text-light">
-                {new Date(post.publishedAt!).toLocaleDateString("ja-JP")}
-              </time>
+            {/* Header */}
+            <header className="mb-10">
+              <div className="flex items-center gap-3 mb-4">
+                {post.category && (
+                  <span className="inline-block text-xs font-medium text-brand bg-brand-light px-2.5 py-1 rounded-full">
+                    {post.category.name}
+                  </span>
+                )}
+                <time className="text-sm text-text-light">
+                  {new Date(post.publishedAt!).toLocaleDateString("ja-JP")}
+                </time>
+              </div>
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary leading-tight">
+                {post.title}
+              </h1>
+            </header>
+
+            {/* Eye catch */}
+            {post.eyecatch && (
+              <div className="aspect-[16/9] relative rounded-xl overflow-hidden mb-10">
+                <Image
+                  src={post.eyecatch.url}
+                  alt={post.title}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 740px"
+                  priority
+                />
+              </div>
+            )}
+
+            {/* Content */}
+            <div
+              className="prose prose-lg max-w-none
+                prose-headings:text-primary prose-headings:font-bold
+                prose-h2:text-xl prose-h2:sm:text-2xl prose-h2:mt-12 prose-h2:mb-4 prose-h2:pb-2 prose-h2:border-b prose-h2:border-black/5
+                prose-h3:text-lg prose-h3:sm:text-xl prose-h3:mt-8 prose-h3:mb-3
+                prose-p:text-text-main prose-p:leading-relaxed
+                prose-a:text-brand prose-a:no-underline hover:prose-a:underline
+                prose-img:rounded-lg
+                prose-code:text-brand prose-code:bg-brand-light prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-code:before:content-none prose-code:after:content-none
+                prose-pre:bg-[#1e1e1e] prose-pre:rounded-xl
+                prose-blockquote:border-brand prose-blockquote:bg-brand-light/30 prose-blockquote:rounded-r-lg prose-blockquote:py-1
+                prose-li:text-text-main
+                prose-strong:text-primary"
+              dangerouslySetInnerHTML={{ __html: post.content }}
+            />
+
+            {/* Back to list */}
+            <div className="mt-16 pt-8 border-t border-black/5">
+              <Link
+                href="/dev/blog"
+                className="inline-flex items-center gap-2 text-sm font-medium text-brand hover:underline"
+              >
+                ← 記事一覧に戻る
+              </Link>
             </div>
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary leading-tight">
-              {post.title}
-            </h1>
-          </header>
+          </article>
 
-          {/* Eye catch */}
-          {post.eyecatch && (
-            <div className="aspect-[16/9] relative rounded-xl overflow-hidden mb-10">
-              <Image
-                src={post.eyecatch.url}
-                alt={post.title}
-                fill
-                className="object-cover"
-                sizes="(max-width: 740px) 100vw, 740px"
-                priority
-              />
+          {/* Sidebar CTA */}
+          <aside className="hidden lg:block w-[300px] shrink-0">
+            <div className="sticky top-32 space-y-6">
+              <div className="rounded-2xl border border-black/5 bg-white p-6 shadow-sm">
+                <p className="text-xs font-semibold text-brand tracking-wide mb-2">
+                  無料相談受付中
+                </p>
+                <h3 className="text-lg font-bold text-primary leading-snug mb-3">
+                  Bubble受託開発の
+                  <br />
+                  ご相談はこちら
+                </h3>
+                <p className="text-sm text-text-light leading-relaxed mb-5">
+                  MVP開発・業務システム・ノーコード移行など、まずはお気軽にご相談ください。
+                </p>
+                <Link
+                  href="/dev#contact"
+                  className="block w-full text-center text-sm font-semibold text-white bg-brand hover:bg-brand-dark rounded-full py-3 transition"
+                >
+                  無料で相談する
+                </Link>
+              </div>
+
+              <div className="rounded-2xl border border-black/5 bg-white p-6 shadow-sm">
+                <p className="text-xs font-semibold text-text-light tracking-wide mb-3">
+                  関連ページ
+                </p>
+                <ul className="space-y-2.5">
+                  <li>
+                    <Link
+                      href="/dev"
+                      className="text-sm text-primary hover:text-brand transition"
+                    >
+                      → Bubble受託開発サービス
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/dev/blog"
+                      className="text-sm text-primary hover:text-brand transition"
+                    >
+                      → 記事一覧
+                    </Link>
+                  </li>
+                </ul>
+              </div>
             </div>
-          )}
+          </aside>
+        </div>
 
-          {/* Content */}
-          <div
-            className="prose prose-lg max-w-none
-              prose-headings:text-primary prose-headings:font-bold
-              prose-h2:text-xl prose-h2:sm:text-2xl prose-h2:mt-12 prose-h2:mb-4 prose-h2:pb-2 prose-h2:border-b prose-h2:border-black/5
-              prose-h3:text-lg prose-h3:sm:text-xl prose-h3:mt-8 prose-h3:mb-3
-              prose-p:text-text-main prose-p:leading-relaxed
-              prose-a:text-brand prose-a:no-underline hover:prose-a:underline
-              prose-img:rounded-lg
-              prose-code:text-brand prose-code:bg-brand-light prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-code:before:content-none prose-code:after:content-none
-              prose-pre:bg-[#1e1e1e] prose-pre:rounded-xl
-              prose-blockquote:border-brand prose-blockquote:bg-brand-light/30 prose-blockquote:rounded-r-lg prose-blockquote:py-1
-              prose-li:text-text-main
-              prose-strong:text-primary"
-            dangerouslySetInnerHTML={{ __html: post.content }}
-          />
-
-          {/* Back to list */}
-          <div className="mt-16 pt-8 border-t border-black/5">
+        {/* Mobile CTA (shown below article on mobile) */}
+        <div className="lg:hidden max-w-[740px] mx-auto px-4 sm:px-6 mt-12">
+          <div className="rounded-2xl border border-black/5 bg-white p-6 shadow-sm text-center">
+            <p className="text-xs font-semibold text-brand tracking-wide mb-2">
+              無料相談受付中
+            </p>
+            <h3 className="text-lg font-bold text-primary mb-3">
+              Bubble受託開発のご相談はこちら
+            </h3>
+            <p className="text-sm text-text-light leading-relaxed mb-5">
+              MVP開発・業務システム・ノーコード移行など、まずはお気軽にご相談ください。
+            </p>
             <Link
-              href="/dev/blog"
-              className="inline-flex items-center gap-2 text-sm font-medium text-brand hover:underline"
+              href="/dev#contact"
+              className="inline-block text-sm font-semibold text-white bg-brand hover:bg-brand-dark rounded-full px-8 py-3 transition"
             >
-              ← 記事一覧に戻る
+              無料で相談する
             </Link>
           </div>
-        </article>
+        </div>
       </main>
       <Footer />
     </>
