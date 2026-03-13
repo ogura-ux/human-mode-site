@@ -91,7 +91,7 @@ export default async function BlogDetailPage({
       {
         "@type": "ListItem",
         position: 2,
-        name: "ブログ",
+        name: "記事一覧",
         item: "https://human-mode.com/blog",
       },
       {
@@ -123,7 +123,7 @@ export default async function BlogDetailPage({
             </Link>
             <span>/</span>
             <Link href="/blog" className="hover:text-brand transition">
-              ブログ
+              記事一覧
             </Link>
             <span>/</span>
             <span className="text-primary truncate max-w-[200px]">
@@ -185,7 +185,7 @@ export default async function BlogDetailPage({
               href="/blog"
               className="inline-flex items-center gap-2 text-sm font-medium text-brand hover:underline"
             >
-              ← ブログ一覧に戻る
+              ← 記事一覧に戻る
             </Link>
           </div>
         </article>

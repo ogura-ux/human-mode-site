@@ -6,12 +6,12 @@ import Footer from "@/components/Footer";
 import { getBlogList } from "@/lib/microcms";
 
 export const metadata: Metadata = {
-  title: "ブログ | 株式会社ヒューマンモード",
+  title: "記事一覧 | 株式会社ヒューマンモード",
   description:
     "Bubble開発・ノーコード・AI連携に関するナレッジを発信。新規事業のMVP開発やBubble受託開発の知見をお届けします。",
   alternates: { canonical: "https://human-mode.com/blog" },
   openGraph: {
-    title: "ブログ | 株式会社ヒューマンモード",
+    title: "記事一覧 | 株式会社ヒューマンモード",
     description:
       "Bubble開発・ノーコード・AI連携に関するナレッジを発信。",
     url: "https://human-mode.com/blog",
@@ -32,7 +32,7 @@ export default async function BlogPage() {
       <main className="pt-32 pb-20 min-h-screen">
         <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
           <h1 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
-            ブログ
+            記事一覧
           </h1>
           <p className="text-text-light mb-12">
             Bubble開発・ノーコード・AI連携に関するナレッジを発信しています。

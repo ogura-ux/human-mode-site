@@ -29,7 +29,7 @@ export default function Header() {
             href="/blog"
             className="text-sm font-bold text-primary hover:text-brand transition hidden md:block"
           >
-            ブログ
+            記事一覧
           </Link>
           <a
             href="https://gourmate-welcome.com/"
