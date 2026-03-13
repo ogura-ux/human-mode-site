@@ -65,9 +65,9 @@ export default function DevContact() {
             ) : (
               <form
                 onSubmit={handleSubmit}
-                className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-10 max-w-[600px] mx-auto text-left"
+                className="bg-white rounded-xl sm:rounded-2xl p-5 sm:p-10 max-w-[600px] mx-auto text-left"
               >
-                <div className="mb-4 sm:mb-6">
+                <div className="mb-5 sm:mb-6">
                   <label className="block font-bold text-xs mb-2 text-text-light">
                     お名前 <span className="text-red-500">*</span>
                   </label>
@@ -77,10 +77,10 @@ export default function DevContact() {
                     placeholder="山田 太郎"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="w-full px-3 sm:px-5 py-3 sm:py-4 border border-slate-200 rounded-lg sm:rounded-xl text-sm sm:text-base outline-none bg-white text-primary placeholder:text-slate-300 transition focus:border-brand focus:shadow-[0_0_0_3px_rgba(12,157,121,0.1)]"
+                    className="w-full px-4 sm:px-5 py-3.5 sm:py-4 border border-slate-200 rounded-lg sm:rounded-xl text-sm sm:text-base outline-none bg-white text-primary placeholder:text-slate-300 transition focus:border-brand focus:shadow-[0_0_0_3px_rgba(12,157,121,0.1)]"
                   />
                 </div>
-                <div className="mb-4 sm:mb-6">
+                <div className="mb-5 sm:mb-6">
                   <label className="block font-bold text-xs mb-2 text-text-light">
                     メールアドレス <span className="text-red-500">*</span>
                   </label>
@@ -90,10 +90,10 @@ export default function DevContact() {
                     placeholder="info@example.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full px-3 sm:px-5 py-3 sm:py-4 border border-slate-200 rounded-lg sm:rounded-xl text-sm sm:text-base outline-none bg-white text-primary placeholder:text-slate-300 transition focus:border-brand focus:shadow-[0_0_0_3px_rgba(12,157,121,0.1)]"
+                    className="w-full px-4 sm:px-5 py-3.5 sm:py-4 border border-slate-200 rounded-lg sm:rounded-xl text-sm sm:text-base outline-none bg-white text-primary placeholder:text-slate-300 transition focus:border-brand focus:shadow-[0_0_0_3px_rgba(12,157,121,0.1)]"
                   />
                 </div>
-                <div className="mb-4 sm:mb-6">
+                <div className="mb-5 sm:mb-6">
                   <label className="block font-bold text-xs mb-2 text-text-light">
                     貴社名（任意）
                   </label>
@@ -102,7 +102,7 @@ export default function DevContact() {
                     placeholder="株式会社〇〇"
                     value={company}
                     onChange={(e) => setCompany(e.target.value)}
-                    className="w-full px-3 sm:px-5 py-3 sm:py-4 border border-slate-200 rounded-lg sm:rounded-xl text-sm sm:text-base outline-none bg-white text-primary placeholder:text-slate-300 transition focus:border-brand focus:shadow-[0_0_0_3px_rgba(12,157,121,0.1)]"
+                    className="w-full px-4 sm:px-5 py-3.5 sm:py-4 border border-slate-200 rounded-lg sm:rounded-xl text-sm sm:text-base outline-none bg-white text-primary placeholder:text-slate-300 transition focus:border-brand focus:shadow-[0_0_0_3px_rgba(12,157,121,0.1)]"
                   />
                 </div>
                 <div className="mb-5 sm:mb-7">
@@ -115,7 +115,7 @@ export default function DevContact() {
                     placeholder="新規事業のMVP開発について相談したい..."
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    className="w-full px-3 sm:px-5 py-3 sm:py-4 border border-slate-200 rounded-lg sm:rounded-xl text-sm sm:text-base outline-none bg-white text-primary placeholder:text-slate-300 transition resize-none focus:border-brand focus:shadow-[0_0_0_3px_rgba(12,157,121,0.1)] font-[inherit]"
+                    className="w-full px-4 sm:px-5 py-3.5 sm:py-4 border border-slate-200 rounded-lg sm:rounded-xl text-sm sm:text-base outline-none bg-white text-primary placeholder:text-slate-300 transition resize-none focus:border-brand focus:shadow-[0_0_0_3px_rgba(12,157,121,0.1)] font-[inherit]"
                   />
                 </div>
                 <button
