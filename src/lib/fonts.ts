@@ -1,4 +1,4 @@
-import { Inter, Noto_Sans_JP, Space_Grotesk } from "next/font/google";
+import { Inter, Noto_Sans_JP, Outfit } from "next/font/google";
 
 export const inter = Inter({
   subsets: ["latin"],
@@ -13,9 +13,9 @@ export const notoSansJP = Noto_Sans_JP({
   weight: ["400", "500", "700", "900"],
 });
 
-export const spaceGrotesk = Space_Grotesk({
+export const outfit = Outfit({
   subsets: ["latin"],
-  variable: "--font-space-grotesk",
+  variable: "--font-outfit",
   display: "swap",
-  weight: ["700"],
+  weight: ["600", "700", "800"],
 });

@@ -21,7 +21,7 @@ export default function DevHeader() {
       }`}
     >
       <div className="max-w-[1080px] mx-auto px-4 sm:px-6 flex justify-between items-center">
-        <Link href="/dev" className="font-bold text-[1.15rem] sm:text-xl tracking-[-0.02em] text-primary" style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}>
+        <Link href="/dev" className="font-extrabold text-[1.15rem] sm:text-xl tracking-[-0.01em] text-primary" style={{ fontFamily: "var(--font-outfit), sans-serif" }}>
           Bubble<span className="text-brand">受託開発</span>
         </Link>
         <nav className="flex gap-4 sm:gap-8 items-center">
