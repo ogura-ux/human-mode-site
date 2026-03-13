@@ -1,1 +1,8 @@
 htaccess.txt
+
+# Dependencies
+node_modules/
+.next/
+
+# Archive
+_archive/

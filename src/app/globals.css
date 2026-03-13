@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-brand: #0c9d79;
+  --color-brand-light: #f1faf8;
+  --color-brand-dark: #087a5e;
+  --color-primary: #0f172a;
+  --color-secondary: #1e293b;
+  --color-text-main: #334155;
+  --color-text-light: #64748b;
+  --color-bg-light: #f8fafc;
+  --font-sans: var(--font-inter), var(--font-noto-sans-jp), system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.gradient-mesh {
+  background: linear-gradient(
+    135deg,
+    #f1faf8 0%,
+    #ffffff 25%,
+    #e6f7f2 50%,
+    #ffffff 75%,
+    #f1faf8 100%
+  );
+  background-size: 400% 400%;
+  animation: gradient-shift 12s ease infinite;
+}
+
+.grid-pattern {
+  background-image:
+    linear-gradient(rgba(12, 157, 121, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(12, 157, 121, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
