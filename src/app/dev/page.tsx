@@ -13,6 +13,7 @@ import FAQ from "@/components/dev/FAQ";
 import DevBlog from "@/components/dev/DevBlog";
 import DevContact from "@/components/dev/DevContact";
 import DevFooter from "@/components/dev/DevFooter";
+import DevCTA from "@/components/dev/DevCTA";
 import DevJsonLd from "@/components/dev/DevJsonLd";
 
 export const metadata: Metadata = {
@@ -48,6 +49,7 @@ export default function DevPage() {
         <CaseStudies />
         <DevServices />
         <Pricing />
+        <DevCTA />
         <TechStack />
         <Process />
         <FAQ />
