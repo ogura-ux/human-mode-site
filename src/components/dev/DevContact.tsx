@@ -37,9 +37,9 @@ export default function DevContact() {
 
   return (
     <section id="contact" className="py-24 sm:py-32">
-      <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
+      <div className="max-w-[1080px] mx-auto sm:px-6">
         <FadeIn>
-          <div className="bg-gradient-to-br from-brand to-secondary rounded-2xl sm:rounded-3xl px-3 sm:px-10 md:px-16 py-10 sm:py-20 text-center text-white">
+          <div className="bg-gradient-to-br from-brand to-secondary sm:rounded-3xl px-3 sm:px-10 md:px-16 py-10 sm:py-20 text-center text-white">
             <h2 className="text-[clamp(1.5rem,4vw,2.25rem)] font-black mb-4 sm:mb-5">
               お問い合わせ
             </h2>
