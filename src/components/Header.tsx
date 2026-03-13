@@ -31,21 +31,7 @@ export default function Header() {
           >
             記事一覧
           </Link>
-          <a
-            href="https://gourmate-welcome.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-bold text-primary hover:text-brand transition hidden md:block"
-          >
-            Gourmate ↗
-          </a>
-          <Link
-            href="#contact"
-            className="text-sm font-bold text-primary hover:text-brand transition hidden md:block"
-          >
-            Contact
-          </Link>
-          <Link
+<Link
             href="/dev"
             className="bg-brand text-white px-5 sm:px-6 py-2.5 rounded-full text-sm font-bold shadow-[0_4px_14px_rgba(12,157,121,0.2)] hover:shadow-[0_6px_20px_rgba(12,157,121,0.35)] hover:-translate-y-0.5 transition-all"
           >
