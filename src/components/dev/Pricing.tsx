@@ -48,7 +48,7 @@ const comparison = [
   { label: "開発コスト", scratch: "500〜2000万円", bubble: "50〜300万円" },
   { label: "開発期間", scratch: "6ヵ月〜1年", bubble: "2週間〜3ヵ月" },
   { label: "改修スピード", scratch: "数週間〜", bubble: "即日〜数日" },
-  { label: "運用コスト", scratch: "月額数十万円〜", bubble: "月額数万円〜" },
+  { label: "運用コスト", scratch: "月額数十万円〜", bubble: "月額10万円〜" },
 ];
 
 export default function Pricing() {
