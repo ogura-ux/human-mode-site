@@ -1,4 +1,3 @@
-import Link from "next/link";
 import FadeIn from "@/components/ui/FadeIn";
 
 export default function DevCTA() {
@@ -22,12 +21,12 @@ export default function DevCTA() {
                 <br className="hidden sm:block" />
                 お気軽にお問い合わせください。
               </p>
-              <Link
+              <a
                 href="#contact"
                 className="inline-block bg-white text-brand font-bold text-sm sm:text-base px-8 sm:px-10 py-3.5 sm:py-4 rounded-full shadow-[0_4px_14px_rgba(0,0,0,0.15)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 transition-all"
               >
                 無料で相談する
-              </Link>
+              </a>
             </div>
           </div>
         </FadeIn>
