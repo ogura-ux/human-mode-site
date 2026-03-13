@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import DevHeader from "@/components/dev/DevHeader";
-import DevFooter from "@/components/dev/DevFooter";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import { getBlogList } from "@/lib/microcms";
 
 export const metadata: Metadata = {
@@ -28,7 +28,7 @@ export default async function BlogPage() {
 
   return (
     <>
-      <DevHeader />
+      <Header />
       <main className="pt-32 pb-20 min-h-screen">
         <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
           <h1 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
@@ -92,7 +92,7 @@ export default async function BlogPage() {
           )}
         </div>
       </main>
-      <DevFooter />
+      <Footer />
     </>
   );
 }

@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import DevHeader from "@/components/dev/DevHeader";
-import DevFooter from "@/components/dev/DevFooter";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import { getBlogDetail, getAllBlogIds } from "@/lib/microcms";
 
 export const revalidate = 60;
@@ -113,7 +113,7 @@ export default async function BlogDetailPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
-      <DevHeader />
+      <Header />
       <main className="pt-32 pb-20">
         <article className="max-w-[740px] mx-auto px-4 sm:px-6">
           {/* Breadcrumb */}
@@ -190,7 +190,7 @@ export default async function BlogDetailPage({
           </div>
         </article>
       </main>
-      <DevFooter />
+      <Footer />
     </>
   );
 }
