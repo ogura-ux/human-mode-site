@@ -2,9 +2,9 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/5 py-20 pb-10 text-sm">
-      <div className="max-w-[1080px] mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-10 mb-16">
+    <footer className="bg-bg-accent text-white py-16 sm:py-20 pb-8 sm:pb-10 text-sm">
+      <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 sm:gap-10 mb-12 sm:mb-16">
           <div>
             <div className="font-black text-brand text-xl tracking-[0.05em] mb-3">
               HUMAN MODE
@@ -12,7 +12,7 @@ export default function Footer() {
             <p className="text-white/30 text-xs">Product Studio</p>
           </div>
 
-          <nav className="flex gap-8">
+          <nav className="flex gap-6 sm:gap-8">
             <Link href="#contact" className="text-white/40 hover:text-brand transition text-sm">
               Contact
             </Link>

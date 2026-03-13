@@ -35,19 +35,16 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contact" className="py-44 relative">
-      {/* Ambient glow */}
-      <div className="glow-orb glow-orb-brand w-[300px] h-[300px] bottom-0 left-[20%]" />
-
-      <div className="max-w-[1080px] mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-20">
+    <section id="contact" className="py-24 sm:py-36 relative bg-brand-light">
+      <div className="max-w-[1080px] mx-auto px-4 sm:px-6 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-12 lg:gap-20">
           <FadeIn>
             <div>
               <SectionLabel>Contact</SectionLabel>
-              <h2 className="text-[2.5rem] font-black text-white mb-8">
+              <h2 className="text-[clamp(1.6rem,4vw,2.5rem)] font-black text-primary mb-6 sm:mb-8">
                 相談をはじめる
               </h2>
-              <p className="text-white/50 max-w-[350px] leading-[1.8]">
+              <p className="text-text-light max-w-[350px] leading-[1.8] text-sm sm:text-base">
                 24時間以内にご連絡いたします。まずはお気軽にお問い合わせください。
               </p>
             </div>
@@ -55,13 +52,13 @@ export default function ContactForm() {
 
           <FadeIn delay={0.15}>
             {submitted ? (
-              <div className="text-center py-16 px-10 glass-card rounded-2xl text-brand font-bold">
+              <div className="text-center py-16 px-8 sm:px-10 bg-white rounded-2xl border border-brand/20 text-brand font-bold shadow-sm">
                 送信が完了しました。担当より追ってご連絡いたします。
               </div>
             ) : (
-              <form onSubmit={handleSubmit}>
-                <div className="mb-7">
-                  <label className="block font-bold text-xs mb-3 text-white/40">
+              <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-6 sm:p-10 shadow-sm border border-slate-100">
+                <div className="mb-6 sm:mb-7">
+                  <label className="block font-bold text-xs mb-2 sm:mb-3 text-text-light">
                     お名前
                   </label>
                   <input
@@ -70,11 +67,11 @@ export default function ContactForm() {
                     placeholder="山田 太郎"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="w-full px-5 py-4 border border-white/10 rounded-xl text-base outline-none bg-white/5 text-white placeholder:text-white/20 transition focus:border-brand focus:bg-white/8 focus:shadow-[0_0_0_4px_rgba(12,157,121,0.08)]"
+                    className="w-full px-4 sm:px-5 py-3.5 sm:py-4 border border-slate-200 rounded-xl text-base outline-none bg-white text-primary placeholder:text-slate-300 transition focus:border-brand focus:shadow-[0_0_0_4px_rgba(12,157,121,0.08)]"
                   />
                 </div>
-                <div className="mb-7">
-                  <label className="block font-bold text-xs mb-3 text-white/40">
+                <div className="mb-6 sm:mb-7">
+                  <label className="block font-bold text-xs mb-2 sm:mb-3 text-text-light">
                     メールアドレス
                   </label>
                   <input
@@ -83,26 +80,26 @@ export default function ContactForm() {
                     placeholder="name@company.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full px-5 py-4 border border-white/10 rounded-xl text-base outline-none bg-white/5 text-white placeholder:text-white/20 transition focus:border-brand focus:bg-white/8 focus:shadow-[0_0_0_4px_rgba(12,157,121,0.08)]"
+                    className="w-full px-4 sm:px-5 py-3.5 sm:py-4 border border-slate-200 rounded-xl text-base outline-none bg-white text-primary placeholder:text-slate-300 transition focus:border-brand focus:shadow-[0_0_0_4px_rgba(12,157,121,0.08)]"
                   />
                 </div>
-                <div className="mb-7">
-                  <label className="block font-bold text-xs mb-3 text-white/40">
+                <div className="mb-6 sm:mb-7">
+                  <label className="block font-bold text-xs mb-2 sm:mb-3 text-text-light">
                     お問い合わせ内容
                   </label>
                   <textarea
                     required
-                    rows={6}
+                    rows={5}
                     placeholder="プロジェクトの概要や、解決したい課題を自由にご記入ください。"
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    className="w-full px-5 py-4 border border-white/10 rounded-xl text-base outline-none bg-white/5 text-white placeholder:text-white/20 transition resize-none focus:border-brand focus:bg-white/8 focus:shadow-[0_0_0_4px_rgba(12,157,121,0.08)] font-[inherit]"
+                    className="w-full px-4 sm:px-5 py-3.5 sm:py-4 border border-slate-200 rounded-xl text-base outline-none bg-white text-primary placeholder:text-slate-300 transition resize-none focus:border-brand focus:shadow-[0_0_0_4px_rgba(12,157,121,0.08)] font-[inherit]"
                   />
                 </div>
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="w-full py-5 bg-brand text-white border-none rounded-xl font-bold text-base cursor-pointer transition hover:shadow-[0_8px_30px_rgba(12,157,121,0.4)] disabled:opacity-60"
+                  className="w-full py-4 sm:py-5 bg-brand text-white border-none rounded-xl font-bold text-sm sm:text-base cursor-pointer transition hover:shadow-[0_8px_30px_rgba(12,157,121,0.4)] disabled:opacity-60"
                 >
                   {submitting ? "送信中..." : "メッセージを送信する"}
                 </button>

@@ -16,32 +16,32 @@ export default function Header() {
     <header
       className={`fixed w-full top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-black/60 backdrop-blur-xl border-b border-white/5 py-4"
+          ? "bg-white/90 backdrop-blur-xl border-b border-black/5 py-4"
           : "bg-transparent py-6"
       }`}
     >
-      <div className="max-w-[1080px] mx-auto px-6 flex justify-between items-center">
+      <div className="max-w-[1080px] mx-auto px-4 sm:px-6 flex justify-between items-center">
         <Link href="/" className="font-black text-xl tracking-[0.05em] text-brand">
           HUMAN MODE
         </Link>
-        <nav className="flex gap-8 items-center">
+        <nav className="flex gap-4 sm:gap-8 items-center">
           <a
             href="https://gourmate-welcome.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm font-bold text-white/70 hover:text-brand transition hidden md:block"
+            className="text-sm font-bold text-primary hover:text-brand transition hidden md:block"
           >
             Gourmate ↗
           </a>
           <Link
             href="#contact"
-            className="text-sm font-bold text-white/70 hover:text-brand transition hidden md:block"
+            className="text-sm font-bold text-primary hover:text-brand transition hidden md:block"
           >
             Contact
           </Link>
           <Link
             href="/dev"
-            className="bg-brand text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-[0_4px_14px_rgba(12,157,121,0.3)] hover:shadow-[0_6px_20px_rgba(12,157,121,0.5)] hover:-translate-y-0.5 transition-all"
+            className="bg-brand text-white px-5 sm:px-6 py-2.5 rounded-full text-sm font-bold shadow-[0_4px_14px_rgba(12,157,121,0.2)] hover:shadow-[0_6px_20px_rgba(12,157,121,0.35)] hover:-translate-y-0.5 transition-all"
           >
             受託開発相談
           </Link>

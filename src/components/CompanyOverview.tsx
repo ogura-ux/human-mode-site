@@ -10,31 +10,33 @@ const companyData = [
 
 export default function CompanyOverview() {
   return (
-    <div className="max-w-[1080px] mx-auto px-6 mt-24">
-      <FadeIn>
-        <div className="glass-card rounded-[32px] py-20 px-8 md:px-16">
-          <div className="max-w-[800px] mx-auto">
-            <SectionLabel>Corporate</SectionLabel>
-            <h2 className="text-[2.2rem] font-black text-white mb-10">
-              Company Overview
-            </h2>
-            <table className="w-full border-collapse">
-              <tbody>
-                {companyData.map((row) => (
-                  <tr key={row.label} className="border-b border-white/5">
-                    <th className="py-6 text-left w-[30%] font-bold text-white/70 text-sm">
-                      {row.label}
-                    </th>
-                    <td className="py-6 text-white/50 text-[0.95rem]">
-                      {row.value}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+    <section className="py-24 sm:py-32">
+      <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
+        <FadeIn>
+          <div className="bg-brand-light rounded-[24px] sm:rounded-[32px] py-16 sm:py-20 px-6 sm:px-8 md:px-16">
+            <div className="max-w-[800px] mx-auto">
+              <SectionLabel>Corporate</SectionLabel>
+              <h2 className="text-[clamp(1.6rem,4vw,2.2rem)] font-black text-primary mb-10">
+                Company Overview
+              </h2>
+              <table className="w-full border-collapse">
+                <tbody>
+                  {companyData.map((row) => (
+                    <tr key={row.label} className="border-b border-brand/10">
+                      <th className="py-5 sm:py-6 text-left w-[30%] font-bold text-primary text-sm">
+                        {row.label}
+                      </th>
+                      <td className="py-5 sm:py-6 text-text-light text-[0.9rem] sm:text-[0.95rem]">
+                        {row.value}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
-        </div>
-      </FadeIn>
-    </div>
+        </FadeIn>
+      </div>
+    </section>
   );
 }
