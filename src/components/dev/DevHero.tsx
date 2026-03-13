@@ -5,8 +5,86 @@ import { motion } from "framer-motion";
 export default function DevHero() {
   return (
     <section className="relative pt-40 pb-24 sm:pt-52 sm:pb-32 gradient-mesh grid-pattern overflow-hidden">
-      <div className="absolute top-20 right-[10%] w-72 h-72 bg-brand/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-10 left-[5%] w-96 h-96 bg-brand/3 rounded-full blur-3xl" />
+      {/* Floating particles — CSS-only, no JS overhead */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
+        {/* Large slow particle */}
+        <div
+          className="absolute w-80 h-80 rounded-full opacity-[0.05]"
+          style={{
+            background: "radial-gradient(circle, #0c9d79 0%, transparent 70%)",
+            top: "5%",
+            right: "8%",
+            animation: "float-1 18s ease-in-out infinite",
+            willChange: "transform",
+          }}
+        />
+        {/* Medium particle */}
+        <div
+          className="absolute w-56 h-56 rounded-full opacity-[0.06]"
+          style={{
+            background: "radial-gradient(circle, #0c9d79 0%, transparent 70%)",
+            bottom: "15%",
+            left: "5%",
+            animation: "float-2 14s ease-in-out infinite",
+            willChange: "transform",
+          }}
+        />
+        {/* Small accent particle */}
+        <div
+          className="absolute w-40 h-40 rounded-full opacity-[0.07]"
+          style={{
+            background: "radial-gradient(circle, #0c9d79 0%, transparent 70%)",
+            top: "40%",
+            left: "35%",
+            animation: "float-3 12s ease-in-out infinite",
+            willChange: "transform",
+          }}
+        />
+        {/* Tiny bright particle */}
+        <div
+          className="absolute w-24 h-24 rounded-full opacity-[0.08]"
+          style={{
+            background: "radial-gradient(circle, #0c9d79 0%, transparent 60%)",
+            top: "20%",
+            left: "60%",
+            animation: "float-2 10s ease-in-out infinite reverse",
+            willChange: "transform",
+          }}
+        />
+        {/* Extra tiny particle */}
+        <div
+          className="absolute w-16 h-16 rounded-full hidden sm:block"
+          style={{
+            background: "radial-gradient(circle, #0c9d79 0%, transparent 60%)",
+            top: "60%",
+            right: "20%",
+            animation: "float-1 8s ease-in-out infinite, pulse-glow 4s ease-in-out infinite",
+            willChange: "transform",
+          }}
+        />
+
+        {/* Diagonal light streaks */}
+        <div
+          className="absolute w-[600px] h-[1px] opacity-[0.08]"
+          style={{
+            background: "linear-gradient(90deg, transparent 0%, #0c9d79 30%, #0c9d79 70%, transparent 100%)",
+            top: "25%",
+            left: "-10%",
+            animation: "streak-slide 12s ease-in-out infinite",
+            willChange: "transform",
+          }}
+        />
+        <div
+          className="absolute w-[400px] h-[1px] opacity-[0.05]"
+          style={{
+            background: "linear-gradient(90deg, transparent 0%, #0c9d79 40%, #0c9d79 60%, transparent 100%)",
+            top: "55%",
+            left: "-5%",
+            animation: "streak-slide 16s ease-in-out 4s infinite",
+            willChange: "transform",
+          }}
+        />
+      </div>
 
       <div className="max-w-[1080px] mx-auto px-4 sm:px-6 relative">
         <motion.p
