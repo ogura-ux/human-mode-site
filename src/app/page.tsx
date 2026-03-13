@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Mission from "@/components/Mission";
 import Services from "@/components/Services";
 import GourmateProduct from "@/components/GourmateProduct";
 import CompanyOverview from "@/components/CompanyOverview";
@@ -13,7 +12,6 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <Mission />
         <Services />
         <GourmateProduct />
         <CompanyOverview />
