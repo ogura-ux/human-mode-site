@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { inter, notoSansJP, outfit } from "@/lib/fonts";
+import LazyMotionProvider from "@/components/ui/LazyMotionProvider";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -36,10 +37,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      </head>
       <body
         className={`${inter.variable} ${notoSansJP.variable} ${outfit.variable} font-sans text-text-main leading-relaxed bg-white`}
       >
-        {children}
+        <LazyMotionProvider>{children}</LazyMotionProvider>
       </body>
     </html>
   );

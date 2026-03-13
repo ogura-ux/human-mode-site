@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import Link from "next/link";
 
 export default function Hero() {
@@ -9,16 +9,16 @@ export default function Hero() {
       <div className="absolute top-20 right-[10%] w-72 h-72 bg-brand/5 rounded-full blur-3xl" />
 
       <div className="max-w-[1080px] mx-auto px-4 sm:px-6 relative">
-        <motion.p
+        <m.p
           className="text-brand font-bold text-xs tracking-[0.25em] uppercase mb-5"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
           Product Studio
-        </motion.p>
+        </m.p>
 
-        <motion.h1
+        <m.h1
           className="text-[clamp(2rem,5vw,3.5rem)] font-black text-primary leading-[1.2] tracking-[-0.02em] mb-6"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -27,9 +27,9 @@ export default function Hero() {
           テクノロジーで、
           <br />
           事業をつくる。
-        </motion.h1>
+        </m.h1>
 
-        <motion.p
+        <m.p
           className="text-sm sm:text-base text-text-light max-w-[520px] leading-[1.9] mb-10"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -37,9 +37,9 @@ export default function Hero() {
         >
           株式会社ヒューマンモードは、Bubble受託開発と自社プロダクト運営の
           2つの事業を展開するプロダクトスタジオです。
-        </motion.p>
+        </m.p>
 
-        <motion.div
+        <m.div
           className="flex flex-wrap gap-3"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -62,7 +62,7 @@ export default function Hero() {
           >
             Gourmate ↗
           </a>
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );
