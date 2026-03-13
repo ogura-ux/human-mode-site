@@ -26,15 +26,11 @@ export const metadata: Metadata = {
       "ノーコードツールBubbleで新規事業のMVP・PoCを最短2週間から開発。スクラッチ比1/3以下のコスト。",
     url: "https://human-mode.com/dev",
     siteName: "Human Mode Inc.",
-    images: [{ url: "/gourmate_OGP.jpg", width: 1200, height: 630 }],
     locale: "ja_JP",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bubble受託開発｜MVP・新規事業を最短2週間で形に",
-    description:
-      "ノーコードツールBubbleで新規事業のMVP・PoCを最短2週間から開発。スクラッチ比1/3以下のコスト。",
   },
 };
 
