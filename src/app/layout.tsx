@@ -8,6 +8,15 @@ export const metadata: Metadata = {
   description:
     "構想で終わらせない。Bubbleを軸とした確かな技術力と、自社プロダクト運営で培った事業視点を武器に、市場で機能するプロダクトを最速で形にします。",
   icons: { icon: "/favicon.png" },
+  alternates: {
+    canonical: "https://human-mode.com",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "株式会社ヒューマンモード | Product Studio",
+    description:
+      "Bubble受託開発と自社プロダクト運営の2つの事業を展開するプロダクトスタジオ。",
+  },
   openGraph: {
     title: "株式会社ヒューマンモード | Product Studio",
     description:
