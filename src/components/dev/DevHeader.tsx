@@ -26,16 +26,16 @@ export default function DevHeader() {
         </Link>
         <nav className="flex gap-4 sm:gap-8 items-center">
           <a
-            href="#about"
+            href="#cases"
             className="text-sm font-bold text-primary hover:text-brand transition hidden md:block"
           >
-            自社サービス
+            事例
           </a>
           <a
-            href="#services"
+            href="#pricing"
             className="text-sm font-bold text-primary hover:text-brand transition hidden md:block"
           >
-            サービス
+            料金
           </a>
           <a
             href="#process"
