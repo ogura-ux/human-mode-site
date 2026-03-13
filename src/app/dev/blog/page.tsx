@@ -1,20 +1,20 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import DevHeader from "@/components/dev/DevHeader";
+import DevFooter from "@/components/dev/DevFooter";
 import { getBlogList } from "@/lib/microcms";
 
 export const metadata: Metadata = {
   title: "記事一覧 | 株式会社ヒューマンモード",
   description:
     "Bubble開発・ノーコード・AI連携に関するナレッジを発信。新規事業のMVP開発やBubble受託開発の知見をお届けします。",
-  alternates: { canonical: "https://human-mode.com/blog" },
+  alternates: { canonical: "https://human-mode.com/dev/blog" },
   openGraph: {
     title: "記事一覧 | 株式会社ヒューマンモード",
     description:
       "Bubble開発・ノーコード・AI連携に関するナレッジを発信。",
-    url: "https://human-mode.com/blog",
+    url: "https://human-mode.com/dev/blog",
     siteName: "Human Mode Inc.",
     locale: "ja_JP",
     type: "website",
@@ -28,7 +28,7 @@ export default async function BlogPage() {
 
   return (
     <>
-      <Header />
+      <DevHeader />
       <main className="pt-32 pb-20 min-h-screen">
         <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
           <h1 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
@@ -48,7 +48,7 @@ export default async function BlogPage() {
               {posts.map((post) => (
                 <Link
                   key={post.id}
-                  href={`/blog/${post.id}`}
+                  href={`/dev/blog/${post.id}`}
                   className="group block bg-white rounded-xl border border-black/5 overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
                 >
                   <div className="aspect-[16/9] bg-bg-light relative overflow-hidden">
@@ -92,7 +92,7 @@ export default async function BlogPage() {
           )}
         </div>
       </main>
-      <Footer />
+      <DevFooter />
     </>
   );
 }

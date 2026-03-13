@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import DevHeader from "@/components/dev/DevHeader";
+import DevFooter from "@/components/dev/DevFooter";
 import { getBlogDetail, getAllBlogIds } from "@/lib/microcms";
 
 export const revalidate = 60;
@@ -24,11 +24,11 @@ export async function generateMetadata({
     return {
       title: `${post.title} | ブログ | 株式会社ヒューマンモード`,
       description: post.description || post.title,
-      alternates: { canonical: `https://human-mode.com/blog/${post.id}` },
+      alternates: { canonical: `https://human-mode.com/dev/blog/${post.id}` },
       openGraph: {
         title: post.title,
         description: post.description || post.title,
-        url: `https://human-mode.com/blog/${post.id}`,
+        url: `https://human-mode.com/dev/blog/${post.id}`,
         siteName: "Human Mode Inc.",
         locale: "ja_JP",
         type: "article",
@@ -74,7 +74,7 @@ export default async function BlogDetailPage({
       name: "株式会社ヒューマンモード",
       url: "https://human-mode.com",
     },
-    mainEntityOfPage: `https://human-mode.com/blog/${post.id}`,
+    mainEntityOfPage: `https://human-mode.com/dev/blog/${post.id}`,
     ...(post.eyecatch && { image: post.eyecatch.url }),
   };
 
@@ -92,13 +92,13 @@ export default async function BlogDetailPage({
         "@type": "ListItem",
         position: 2,
         name: "記事一覧",
-        item: "https://human-mode.com/blog",
+        item: "https://human-mode.com/dev/blog",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: post.title,
-        item: `https://human-mode.com/blog/${post.id}`,
+        item: `https://human-mode.com/dev/blog/${post.id}`,
       },
     ],
   };
@@ -113,16 +113,16 @@ export default async function BlogDetailPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
-      <Header />
+      <DevHeader />
       <main className="pt-32 pb-20">
         <article className="max-w-[740px] mx-auto px-4 sm:px-6">
           {/* Breadcrumb */}
           <nav className="flex items-center gap-2 text-sm text-text-light mb-8">
-            <Link href="/" className="hover:text-brand transition">
-              ホーム
+            <Link href="/dev" className="hover:text-brand transition">
+              Bubble受託開発
             </Link>
             <span>/</span>
-            <Link href="/blog" className="hover:text-brand transition">
+            <Link href="/dev/blog" className="hover:text-brand transition">
               記事一覧
             </Link>
             <span>/</span>
@@ -182,7 +182,7 @@ export default async function BlogDetailPage({
           {/* Back to list */}
           <div className="mt-16 pt-8 border-t border-black/5">
             <Link
-              href="/blog"
+              href="/dev/blog"
               className="inline-flex items-center gap-2 text-sm font-medium text-brand hover:underline"
             >
               ← 記事一覧に戻る
@@ -190,7 +190,7 @@ export default async function BlogDetailPage({
           </div>
         </article>
       </main>
-      <Footer />
+      <DevFooter />
     </>
   );
 }

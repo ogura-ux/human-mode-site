@@ -26,7 +26,7 @@ export default function Header() {
         </Link>
         <nav className="flex gap-4 sm:gap-8 items-center">
           <Link
-            href="/blog"
+            href="/dev/blog"
             className="text-sm font-bold text-primary hover:text-brand transition hidden md:block"
           >
             記事一覧
