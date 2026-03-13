@@ -2,13 +2,16 @@
 
 @theme inline {
   --color-brand: #0c9d79;
-  --color-brand-light: #f1faf8;
+  --color-brand-light: rgba(12, 157, 121, 0.08);
   --color-brand-dark: #087a5e;
-  --color-primary: #0f172a;
-  --color-secondary: #1e293b;
-  --color-text-main: #334155;
-  --color-text-light: #64748b;
-  --color-bg-light: #f8fafc;
+  --color-brand-glow: rgba(12, 157, 121, 0.15);
+  --color-primary: #f5f5f5;
+  --color-secondary: #888888;
+  --color-text-main: #f5f5f5;
+  --color-text-light: #888888;
+  --color-surface: #111111;
+  --color-border: #1a1a1a;
+  --color-bg-dark: #050505;
   --font-sans: var(--font-inter), var(--font-noto-sans-jp), system-ui, sans-serif;
 }
 
@@ -21,28 +24,47 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-@keyframes gradient-shift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+/* Glow effects */
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
 }
 
-.gradient-mesh {
-  background: linear-gradient(
-    135deg,
-    #f1faf8 0%,
-    #ffffff 25%,
-    #e6f7f2 50%,
-    #ffffff 75%,
-    #f1faf8 100%
-  );
-  background-size: 400% 400%;
-  animation: gradient-shift 12s ease infinite;
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
 }
 
-.grid-pattern {
+/* Glass card styles */
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.4s ease;
+}
+
+.glass-card:hover {
+  border-color: rgba(12, 157, 121, 0.3);
+  box-shadow: 0 0 30px rgba(12, 157, 121, 0.08), inset 0 0 30px rgba(12, 157, 121, 0.02);
+}
+
+/* Ambient glow orbs */
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.glow-orb-brand {
+  background: rgba(12, 157, 121, 0.12);
+  animation: glow-pulse 6s ease-in-out infinite, float 8s ease-in-out infinite;
+}
+
+/* Grid pattern for dark theme */
+.grid-pattern-dark {
   background-image:
-    linear-gradient(rgba(12, 157, 121, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(12, 157, 121, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
   background-size: 60px 60px;
 }

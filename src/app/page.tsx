@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Expertise from "@/components/Expertise";
+import Mission from "@/components/Mission";
+import Services from "@/components/Services";
 import GourmateProduct from "@/components/GourmateProduct";
 import CompanyOverview from "@/components/CompanyOverview";
 import ContactForm from "@/components/ContactForm";
@@ -12,7 +13,8 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <Expertise />
+        <Mission />
+        <Services />
         <GourmateProduct />
         <CompanyOverview />
         <ContactForm />

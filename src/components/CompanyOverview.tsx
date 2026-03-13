@@ -12,20 +12,20 @@ export default function CompanyOverview() {
   return (
     <div className="max-w-[1080px] mx-auto px-6 mt-24">
       <FadeIn>
-        <div className="bg-brand-light rounded-[40px] py-24 px-8 md:px-16">
+        <div className="glass-card rounded-[32px] py-20 px-8 md:px-16">
           <div className="max-w-[800px] mx-auto">
             <SectionLabel>Corporate</SectionLabel>
-            <h2 className="text-[2.2rem] font-black text-primary mb-10">
+            <h2 className="text-[2.2rem] font-black text-white mb-10">
               Company Overview
             </h2>
             <table className="w-full border-collapse">
               <tbody>
                 {companyData.map((row) => (
-                  <tr key={row.label} className="border-b border-brand/10">
-                    <th className="py-6 text-left w-[30%] font-bold text-primary text-sm">
+                  <tr key={row.label} className="border-b border-white/5">
+                    <th className="py-6 text-left w-[30%] font-bold text-white/70 text-sm">
                       {row.label}
                     </th>
-                    <td className="py-6 text-text-light text-[0.95rem]">
+                    <td className="py-6 text-white/50 text-[0.95rem]">
                       {row.value}
                     </td>
                   </tr>
