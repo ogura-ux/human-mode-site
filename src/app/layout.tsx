@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { inter, notoSansJP } from "@/lib/fonts";
+import { inter, notoSansJP, spaceGrotesk } from "@/lib/fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body
-        className={`${inter.variable} ${notoSansJP.variable} font-sans text-text-main leading-relaxed bg-white`}
+        className={`${inter.variable} ${notoSansJP.variable} ${spaceGrotesk.variable} font-sans text-text-main leading-relaxed bg-white`}
       >
         {children}
       </body>
