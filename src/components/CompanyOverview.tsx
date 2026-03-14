@@ -3,8 +3,9 @@ import FadeIn from "./ui/FadeIn";
 
 const companyData = [
   { label: "名称", value: "株式会社ヒューマンモード" },
+  { label: "代表取締役", value: "小倉柊平" },
   { label: "事業内容", value: "Bubble受託開発 / 自社サービス運営" },
-  { label: "所在地", value: "東京都千代田区" },
+  { label: "所在地", value: "東京都千代田区麹町３丁目５－４麹町インテリジェントビルＢ－１" },
   { label: "公式URL", value: "https://human-mode.com" },
 ];
 

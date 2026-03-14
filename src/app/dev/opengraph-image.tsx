@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 
-export const alt = "Bubble受託開発｜MVP・新規事業を最短2週間で形に";
+export const alt = "HUMAN MODE｜MVP・新規事業を最短2週間で形に";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -119,7 +119,7 @@ export default async function Image() {
                 display: "flex",
               }}
             >
-              Bubble受託開発
+              HUMAN MODE
             </div>
           </div>
 

@@ -10,8 +10,10 @@ export default function DevJsonLd() {
       "Bubble受託開発と自社プロダクト運営の2つの事業を展開するプロダクトスタジオ。",
     address: {
       "@type": "PostalAddress",
+      streetAddress: "麹町３丁目５－４麹町インテリジェントビルＢ－１",
       addressLocality: "千代田区",
       addressRegion: "東京都",
+      postalCode: "102-0083",
       addressCountry: "JP",
     },
     sameAs: ["https://gourmate-welcome.com/"],
