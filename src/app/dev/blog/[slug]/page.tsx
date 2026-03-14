@@ -111,21 +111,21 @@ export default async function BlogDetailPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <Header />
-      <main className="pt-32 pb-20">
+      <main className="pt-24 sm:pt-32 pb-16 sm:pb-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:flex lg:gap-10">
           {/* Article */}
           <article className="min-w-0 lg:flex-1">
             {/* Breadcrumb */}
-            <nav className="flex items-center gap-2 text-sm text-text-light mb-8">
-              <Link href="/dev" className="hover:text-brand transition">
+            <nav className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm text-text-light mb-6 sm:mb-8 overflow-x-auto whitespace-nowrap scrollbar-hide">
+              <Link href="/dev" className="hover:text-brand transition shrink-0">
                 Bubble受託開発
               </Link>
-              <span>/</span>
-              <Link href="/dev/blog" className="hover:text-brand transition">
+              <span className="shrink-0">/</span>
+              <Link href="/dev/blog" className="hover:text-brand transition shrink-0">
                 記事一覧
               </Link>
-              <span>/</span>
-              <span className="text-primary truncate max-w-[200px]">
+              <span className="shrink-0">/</span>
+              <span className="text-primary truncate max-w-[180px] sm:max-w-[300px]">
                 {post.title}
               </span>
             </nav>
@@ -163,18 +163,20 @@ export default async function BlogDetailPage({
 
             {/* Content */}
             <div
-              className="prose prose-lg max-w-none
+              className="prose prose-base sm:prose-lg max-w-none
                 prose-headings:text-primary prose-headings:font-bold
-                prose-h2:text-xl prose-h2:sm:text-2xl prose-h2:mt-12 prose-h2:mb-4 prose-h2:pb-2 prose-h2:border-b prose-h2:border-black/5
-                prose-h3:text-lg prose-h3:sm:text-xl prose-h3:mt-8 prose-h3:mb-3
-                prose-p:text-text-main prose-p:leading-relaxed
+                prose-h2:text-lg prose-h2:sm:text-2xl prose-h2:mt-10 prose-h2:sm:mt-12 prose-h2:mb-4 prose-h2:pb-2 prose-h2:border-b prose-h2:border-black/5
+                prose-h3:text-base prose-h3:sm:text-xl prose-h3:mt-6 prose-h3:sm:mt-8 prose-h3:mb-3
+                prose-p:text-text-main prose-p:leading-relaxed prose-p:text-sm prose-p:sm:text-base
                 prose-a:text-brand prose-a:no-underline hover:prose-a:underline
                 prose-img:rounded-lg
                 prose-code:text-brand prose-code:bg-brand-light prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-code:before:content-none prose-code:after:content-none
-                prose-pre:bg-[#1e1e1e] prose-pre:rounded-xl
+                prose-pre:bg-[#1e1e1e] prose-pre:rounded-xl prose-pre:overflow-x-auto
                 prose-blockquote:border-brand prose-blockquote:bg-brand-light/30 prose-blockquote:rounded-r-lg prose-blockquote:py-1
-                prose-li:text-text-main
-                prose-strong:text-primary"
+                prose-li:text-text-main prose-li:text-sm prose-li:sm:text-base
+                prose-strong:text-primary
+                prose-table:text-sm prose-table:sm:text-base
+                [&_table]:block [&_table]:overflow-x-auto [&_table]:whitespace-nowrap [&_table]:sm:table [&_table]:sm:overflow-visible [&_table]:sm:whitespace-normal"
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
 
