@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 
 export default function Header() {
   const pathname = usePathname();
-  const isBlogPage = pathname.startsWith("/dev/blog");
+  const isBlogDetail = pathname.startsWith("/dev/blog/");
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -28,7 +28,7 @@ export default function Header() {
           HUMAN MODE
         </Link>
         <nav className="flex gap-3 sm:gap-8 items-center shrink-0">
-          {isBlogPage && (
+          {isBlogDetail && (
             <Link
               href="/dev/blog"
               className="text-xs sm:text-sm font-bold text-primary hover:text-brand transition whitespace-nowrap"
