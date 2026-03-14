@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://human-mode.com",
+    types: {
+      "application/rss+xml": "https://human-mode.com/feed.xml",
+    },
   },
   twitter: {
     card: "summary_large_image",
