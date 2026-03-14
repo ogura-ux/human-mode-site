@@ -1,6 +1,12 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
+  const pathname = usePathname();
+  const isBlogList = pathname === "/dev/blog";
+
   return (
     <footer className="bg-bg-accent text-white py-16 sm:py-20 pb-8 sm:pb-10 text-sm">
       <div className="max-w-[1080px] mx-auto px-4 sm:px-6">
@@ -13,12 +19,14 @@ export default function Footer() {
           </div>
 
           <nav className="flex gap-6 sm:gap-8">
-<Link href="/dev" className="text-white/40 hover:text-brand transition text-sm">
+            <Link href="/dev" className="text-white/40 hover:text-brand transition text-sm">
               受託開発
             </Link>
-            <Link href="/dev/blog" className="text-white/40 hover:text-brand transition text-sm">
-              記事一覧
-            </Link>
+            {!isBlogList && (
+              <Link href="/dev/blog" className="text-white/40 hover:text-brand transition text-sm">
+                記事一覧
+              </Link>
+            )}
           </nav>
         </div>
 
